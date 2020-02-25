@@ -18,12 +18,14 @@ credit_cards = [{
   num_length: [13, 16]
 }]
 
-CardNum.check_argument?
+cn = CardNum.new(ARGV)
 
-four_digits = CardNum.get_begin_digits 0..3
-two_digits = CardNum.get_begin_digits 0..1
-one_digit = CardNum.get_begin_digits 0
-number_length = CardNum.get_number_length
+cn.check_argument
+
+four_digits = cn.get_begin_digits(0..3)
+two_digits = cn.get_begin_digits(0..1)
+one_digit = cn.get_begin_digits(0)
+number_length = cn.get_number_length
 
 credit_cards.each do |credit_card|
   if (credit_card[:begins_with].include?(four_digits.to_i) ||
@@ -36,4 +38,4 @@ credit_cards.each do |credit_card|
 end
 puts 'Card type: Unknown.' if @card_type == nil
 
-CardNum.check_luhn_algorithm?
+cn.check_luhn_algorithm
