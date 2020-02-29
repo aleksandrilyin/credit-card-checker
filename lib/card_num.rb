@@ -1,12 +1,12 @@
 class CardNum
-  attr_accessor :card_num
+  attr_writer :card_num
 
   def initialize(card_num)
     @card_num = card_num
   end
 
   def check_argument
-    abort 'Need some argument!' if @card_num[0] == nil
+    abort 'Need some argument!' if @card_num[0].nil?
   end
 
   def get_begin_digits(i)

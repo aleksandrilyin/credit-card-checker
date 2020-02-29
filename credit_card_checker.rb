@@ -36,6 +36,6 @@ credit_cards.each do |credit_card|
     puts "Card type: #{@card_type}."
   end
 end
-puts 'Card type: Unknown.' if @card_type == nil
+puts 'Card type: Unknown.' if @card_type.nil?
 
 cn.check_luhn_algorithm
