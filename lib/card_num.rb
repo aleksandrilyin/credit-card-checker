@@ -6,7 +6,13 @@ class CardNum
   end
 
   def check_argument
-    abort 'Need some argument!' if @card_num[0].nil?
+    if @card_num.empty?
+      abort 'Need some argument!'
+    elsif @card_num.join.match?(/\D/)
+      abort 'The card number must contain only digits!'
+    elsif not get_number_length.to_s.match?(/13|15|16/)
+      abort 'Wrong card number length!'
+    end
   end
 
   def get_begin_digits(i)
