@@ -25,13 +25,13 @@ cn.check_argument
 four_digits = cn.get_begin_digits(0..3)
 two_digits = cn.get_begin_digits(0..1)
 one_digit = cn.get_begin_digits(0)
-number_length = cn.get_number_length
+num_length = cn.get_num_length
 
 credit_cards.each do |credit_card|
   if (credit_card[:begins_with].include?(four_digits.to_i) ||
   credit_card[:begins_with].include?(two_digits.to_i) ||
   credit_card[:begins_with].include?(one_digit.to_i)) &&
-  credit_card[:num_length].include?(number_length)
+  credit_card[:num_length].include?(num_length)
     @card_type = credit_card[:card_type]
     puts "Card type: #{@card_type}."
   end

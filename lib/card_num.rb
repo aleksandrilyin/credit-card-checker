@@ -10,7 +10,7 @@ class CardNum
       abort 'Need some argument!'
     elsif @card_num.match?(/\D/)
       abort 'The card number must contain only digits!'
-    elsif not get_number_length.to_s.match?(/13|15|16/)
+    elsif not get_num_length.to_s.match?(/13|15|16/)
       abort 'Wrong card number length!'
     end
   end
@@ -20,7 +20,7 @@ class CardNum
     i != 0 ? first_digit.join : first_digit
   end
 
-  def get_number_length
+  def get_num_length
     @card_num.size
   end
 
