@@ -21,7 +21,7 @@ class CardNum
   end
 
   def get_number_length
-    @card_num.length
+    @card_num.size
   end
 
   def check_luhn_algorithm
