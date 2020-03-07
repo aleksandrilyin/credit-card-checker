@@ -1,20 +1,45 @@
-# Credit card checker
+# Сервис проверки кредитных карт
 
-Сервис проверки кредитных карт. Решение [тестового задания](https://github.com/aristofun/webdevdao/blob/master/test_assignments/credit_card_checker.md) на позицию Ruby on Rails разработчика.
+## Описание
 
-## Функции
+Решение [тестового задания](https://github.com/aristofun/webdevdao/blob/master/test_assignments/credit_card_checker.md) на позицию Ruby on Rails разработчика.
+
+Использована [реализация алгоритма Луна](https://ru.wikibooks.org/wiki/Реализации_алгоритмов/Алгоритм_Луна).
+
+### Функции
 
 - Проверка соответствия карты известному шаблону одного из принятых поставщиков карт (AMEX, Discover, MasterCard, Visa или Неизвестно)
-- Проверка признака соответствия карты [алгоритму Луна](https://ru.wikibooks.org/wiki/Реализации_алгоритмов/Алгоритм_Луна) (Действительный/Недействительный)
+- Проверка признака соответствия карты алгоритму Луна (Действительный/Недействительный)
 
-## Технологии
+## Требования
 
-- Ruby 2.6.5
+- Ruby 2.5.0 или новее
 
-## Запуск
+## Установка
 
-1. Клонируйте локально: `git clone git@github.com:aleksandrilyin/credit-card-checker.git`
-2. Перейдите в директорию: `cd credit-card-checker`
-3. Запустите программу: `ruby credit-card-checker.rb <номер карты>`
+[Скачайте ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/master.zip) или клонируйте локально:
+```console
+$ git clone git@github.com:aleksandrilyin/credit-card-checker.git
+```
 
-Для успешного запуска вам нужно установить Ruby 2.x.
+## Использование
+
+Перейдите в директорию:
+```console
+$ cd credit-card-checker
+```
+
+Запустите программу:
+```console
+$ ruby credit-card-checker.rb <номер карты>
+```
+
+Небольшой пример использования:
+```console
+$ ruby credit-card-checker.rb 4408 0412 3456 7893
+Card type: Visa.
+That card is valid.
+$ ruby credit-card-checker.rb 4417 1234 5678 9112
+Card type: Visa.
+That card is not valid.
+```
