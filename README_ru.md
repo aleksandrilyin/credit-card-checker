@@ -68,19 +68,19 @@ $ cd credit-card-checker
 
 Запустите программу:
 ``` sh
-$ ruby credit-card-checker.rb <номер карты>
+$ ruby credit_card_checker.rb <номер карты>
 ```
 
 ### Примеры использования
 
 ``` sh
-$ ruby credit-card-checker.rb 4408 0412 3456 7893
+$ ruby credit_card_checker.rb 4408 0412 3456 7893
 Card type: Visa.
 That card is valid.
 ```
 
 ``` sh
-$ ruby credit-card-checker.rb 4417 1234 5678 9112
+$ ruby credit_card_checker.rb 4417 1234 5678 9112
 Card type: Visa.
 That card is not valid.
 ```
