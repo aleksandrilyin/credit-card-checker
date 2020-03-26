@@ -55,31 +55,31 @@ That card is not valid.
 ## Installation
 
 [Download ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/master.zip) or clone locally:
-``` sh
+```sh
 $ git clone git@github.com:aleksandrilyin/credit-card-checker.git
 ```
 
 ## Usage
 
 Go to the directory:
-``` sh
+```sh
 $ cd credit-card-checker
 ```
 
 Run the program:
-``` sh
+```sh
 $ ruby credit_card_checker.rb <card number>
 ```
 
 ### Usage examples
 
-``` sh
+```sh
 $ ruby credit_card_checker.rb 4408 0412 3456 7893
 Card type: Visa.
 That card is valid.
 ```
 
-``` sh
+```sh
 $ ruby credit_card_checker.rb 4417 1234 5678 9112
 Card type: Visa.
 That card is not valid.
