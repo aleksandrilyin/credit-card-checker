@@ -45,41 +45,41 @@ That card is not valid.
 
 ## Features
 
-- Checking the card matches a known pattern from one of the accepted card providers (AMEX, Discover, MasterCard, Visa or Unknown)
-- Checking indication of whether the card passes the Luhn algorithm (Valid/Invalid)
+* Checking the card matches a known pattern from one of the accepted card providers (AMEX, Discover, MasterCard, Visa or Unknown)
+* Checking indication of whether the card passes the Luhn algorithm (Valid/Invalid)
 
 ## Requirements
 
-- Ruby 2.5.0 or newer
+* Ruby 2.5.0 or newer
 
 ## Installation
 
 [Download ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/master.zip) or clone locally:
-```console
+``` sh
 $ git clone git@github.com:aleksandrilyin/credit-card-checker.git
 ```
 
 ## Usage
 
 Go to the directory:
-```console
+``` sh
 $ cd credit-card-checker
 ```
 
 Run the program:
-```console
+``` sh
 $ ruby credit-card-checker.rb <card number>
 ```
 
 ### Usage examples
 
-```console
+``` sh
 $ ruby credit-card-checker.rb 4408 0412 3456 7893
 Card type: Visa.
 That card is valid.
 ```
 
-```console
+``` sh
 $ ruby credit-card-checker.rb 4417 1234 5678 9112
 Card type: Visa.
 That card is not valid.
@@ -87,4 +87,4 @@ That card is not valid.
 
 ## Localization `README.md`
 
-- [Russian README](README_ru.md)
+* [Russian README](README_ru.md)

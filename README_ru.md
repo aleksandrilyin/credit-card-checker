@@ -45,41 +45,41 @@
 
 ## Возможности
 
-- Проверка соответствия карты известному шаблону одного из принятых поставщиков карт (AMEX, Discover, MasterCard, Visa или Неизвестно)
-- Проверка признака соответствия карты алгоритму Луна (Действительный/Недействительный)
+* Проверка соответствия карты известному шаблону одного из принятых поставщиков карт (AMEX, Discover, MasterCard, Visa или Неизвестно)
+* Проверка признака соответствия карты алгоритму Луна (Действительный/Недействительный)
 
 ## Требования
 
-- Ruby 2.5.0 или новее
+* Ruby 2.5.0 или новее
 
 ## Установка
 
 [Скачайте ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/master.zip) или клонируйте локально:
-```console
+``` sh
 $ git clone git@github.com:aleksandrilyin/credit-card-checker.git
 ```
 
 ## Использование
 
 Перейдите в директорию:
-```console
+``` sh
 $ cd credit-card-checker
 ```
 
 Запустите программу:
-```console
+``` sh
 $ ruby credit-card-checker.rb <номер карты>
 ```
 
 ### Примеры использования
 
-```console
+``` sh
 $ ruby credit-card-checker.rb 4408 0412 3456 7893
 Card type: Visa.
 That card is valid.
 ```
 
-```console
+``` sh
 $ ruby credit-card-checker.rb 4417 1234 5678 9112
 Card type: Visa.
 That card is not valid.
