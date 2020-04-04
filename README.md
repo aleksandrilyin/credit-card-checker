@@ -50,7 +50,7 @@ That card is not valid.
 
 ## Requirements
 
-* Ruby 2.5.0 or newer
+* Ruby 2.6.6 or newer
 
 ## Installation
 
@@ -87,4 +87,4 @@ That card is not valid.
 
 ## Localization `README.md`
 
-* [Russian README](README_ru.md)
+* [Russian README](README-ru.md)
