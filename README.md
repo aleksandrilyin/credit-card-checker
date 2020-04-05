@@ -50,7 +50,7 @@ That card is not valid.
 
 ## Requirements
 
-* Ruby 2.6.6 or newer
+* Ruby 2.6.5 or newer
 
 ## Installation
 
