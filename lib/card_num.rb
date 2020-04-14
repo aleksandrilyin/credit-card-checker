@@ -6,13 +6,9 @@ class CardNum
   end
 
   def check_argument
-    if @card_num.empty?
-      abort 'Need some argument!'
-    elsif @card_num.match?(/\D/)
-      abort 'The card number must contain only digits!'
-    elsif not get_num_length.to_s.match?(/13|15|16/)
-      abort 'Wrong card number length!'
-    end
+    raise ArgumentError.new('undefined card number') if @card_num.empty?
+    raise ArgumentError.new('expected only digits in the card number') if @card_num.match?(/\D/)
+    raise ArgumentError.new('unexpected card number length other than 13, 15 or 16 digits') unless get_num_length.to_s.match?(/13|15|16/)
   end
 
   def get_begin_digits(i)
