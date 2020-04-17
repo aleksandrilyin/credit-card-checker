@@ -37,15 +37,12 @@ class CardNum
       }
     ]
 
-    four_digits = get_begin_digits(0..3)
-    two_digits = get_begin_digits(0..1)
-    one_digit = get_begin_digits(0)
     num_length = get_num_length
 
     cards.each do |card|
-      if (card[:begins_with].include?(four_digits.to_i) ||
-      card[:begins_with].include?(two_digits.to_i) ||
-      card[:begins_with].include?(one_digit.to_i)) &&
+      if (card[:begins_with].include?(get_begin_digits(0..3).to_i) ||
+      card[:begins_with].include?(get_begin_digits(0..1).to_i) ||
+      card[:begins_with].include?(get_begin_digits(0).to_i)) &&
       card[:num_length].include?(num_length)
         @card_type = card[:card_type]
         puts "Card type: #{@card_type}."
