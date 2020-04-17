@@ -6,8 +6,8 @@ class CardNum
   end
 
   def get_begin_digits(i)
-    first_digits = @card_num.split(//)[i]
-    i != 0 ? first_digits.join : first_digits
+    begin_digits = @card_num.split(//)[i]
+    i != 0 ? begin_digits.join : begin_digits
   end
 
   def check_card
