@@ -12,8 +12,8 @@ class CardNum
   end
 
   def get_begin_digits(i)
-    first_digit = @card_num.split(//)[i]
-    i != 0 ? first_digit.join : first_digit
+    first_digits = @card_num.split(//)[i]
+    i != 0 ? first_digits.join : first_digits
   end
 
   def get_num_length
