@@ -31,11 +31,11 @@ class CardNum
       }
     ]
 
-    num_length = get_num_length
+    num_length = @card_num.size
 
     raise ArgumentError.new('undefined card number') if @card_num.empty?
     raise ArgumentError.new('expected only digits in the card number') if @card_num.match?(/\D/)
-    raise ArgumentError.new('unexpected card number length other than 13, 15 or 16 digits') unless get_num_length.to_s.match?(/13|15|16/)
+    raise ArgumentError.new('unexpected card number length other than 13, 15 or 16 digits') unless num_length.to_s.match?(/13|15|16/)
 
     cards.each do |card|
       if (card[:begins_with].include?(get_begin_digits(0..3).to_i) ||
@@ -53,9 +53,5 @@ class CardNum
     else
       puts 'That card is not valid.'
     end
-  end
-
-  def get_num_length
-    @card_num.size
   end
 end
