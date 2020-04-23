@@ -75,12 +75,12 @@ $ ruby credit_card_checker.rb <номер карты>
 
 ```sh
 $ ruby credit_card_checker.rb 4408 0412 3456 7893
-Card type: Visa.
-That card is valid.
+Card Type: Visa
+Card Validity: Valid
 ```
 
 ```sh
 $ ruby credit_card_checker.rb 4417 1234 5678 9112
-Card type: Visa.
-That card is not valid.
+Card Type: Visa
+Card Validity: Invalid
 ```
