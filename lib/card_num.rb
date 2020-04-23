@@ -43,15 +43,18 @@ class CardNum
       card[:begins_with].include?(get_begin_digits(0).to_i)) &&
       card[:num_length].include?(num_length)
         @card_type = card[:card_type]
-        puts "Card type: #{@card_type}."
       end
     end
-    puts 'Card type: Unknown.' if @card_type.nil?
+
+    @card_type = :Unknown if @card_type.nil?
+    puts "Card Type: #{@card_type}"
 
     if @card_num.reverse.split(//).each_slice(2).flat_map{ |a, b| [a.to_i, 2 * b.to_i] }.join.split(//).map(&:to_i).reduce(:+) % 10 == 0
-      puts 'That card is valid.'
+      card_validity = :Valid
     else
-      puts 'That card is not valid.'
+      card_validity = :Invalid
     end
+
+    puts "Card Validity: #{card_validity}"
   end
 end
