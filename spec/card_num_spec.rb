@@ -1,7 +1,7 @@
 require 'card_num'
 
 describe CardNum do
-  let(:cn) { described_class.new(%w[4408 0412 3456 7893]) }
+  subject(:cn) { described_class.new(%w[4408 0412 3456 7893]) }
 
   describe '#get_begin_digits' do
     context 'when get begin digits' do
