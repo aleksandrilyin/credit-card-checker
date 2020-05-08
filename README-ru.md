@@ -84,3 +84,20 @@ $ ruby credit_card_checker.rb 4417 1234 5678 9112
 Card Type: Visa
 Card Validity: Invalid
 ```
+
+## Тестирование
+
+Установите гем Bundler:
+```sh
+$ gem install bundler
+```
+
+Установите зависимости:
+```sh
+$ bundle
+```
+
+Запустите тесты:
+```sh
+$ bundle exec rspec -f d
+```

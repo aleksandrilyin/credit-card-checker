@@ -85,6 +85,23 @@ Card Type: Visa
 Card Validity: Invalid
 ```
 
+## Testing
+
+Install the Bundler gem:
+```sh
+$ gem install bundler
+```
+
+Install the dependencies:
+```sh
+$ bundle
+```
+
+Run the tests:
+```sh
+$ bundle exec rspec -f d
+```
+
 ## Localization `README.md`
 
 * [Russian README](README-ru.md)
