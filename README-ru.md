@@ -54,7 +54,7 @@
 
 ## Установка
 
-[Скачайте ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/master.zip) или клонируйте локально:
+[Скачайте ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/master.zip) или клонируйте репозиторий локально:
 ```sh
 $ git clone git@github.com:aleksandrilyin/credit-card-checker.git
 ```
@@ -63,7 +63,7 @@ $ git clone git@github.com:aleksandrilyin/credit-card-checker.git
 
 Перейдите в директорию:
 ```sh
-$ cd credit-card-checker
+$ cd credit-card-checker/
 ```
 
 Запустите программу:

@@ -1,6 +1,6 @@
-# Credit card check service
+# Credit Card Check Service
 
-The solution of the [test task](https://github.com/aristofun/webdevdao/blob/master/test_assignments/credit_card_checker.md) for the position of Ruby on Rails developer.
+The solution of the [test assignment](https://github.com/aristofun/webdevdao/blob/master/test_assignments/credit_card_checker.md) for the position of Ruby on Rails developer.
 
 [The implementation of the Luhn algorithm](https://ru.wikibooks.org/wiki/Реализации_алгоритмов/Алгоритм_Луна) is used.
 
@@ -54,7 +54,7 @@ That card is not valid.
 
 ## Installation
 
-[Download ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/master.zip) or clone locally:
+[Download ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/master.zip) or clone the repository locally:
 ```sh
 $ git clone git@github.com:aleksandrilyin/credit-card-checker.git
 ```
@@ -63,7 +63,7 @@ $ git clone git@github.com:aleksandrilyin/credit-card-checker.git
 
 Go to the directory:
 ```sh
-$ cd credit-card-checker
+$ cd credit-card-checker/
 ```
 
 Run the program:
@@ -71,7 +71,7 @@ Run the program:
 $ ruby credit_card_checker.rb <card number>
 ```
 
-### Usage examples
+### Usage Examples
 
 ```sh
 $ ruby credit_card_checker.rb 4408 0412 3456 7893
