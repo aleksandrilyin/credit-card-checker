@@ -42,12 +42,12 @@ class CardNum
       card[:begins_with].include?(get_begin_digits(0..1).to_i) ||
       card[:begins_with].include?(get_begin_digits(0).to_i)) &&
       card[:num_length].include?(@card_num.size)
-        @card_type = card[:card_type]
+        @@card_type = card[:card_type]
       end
     end
 
-    @card_type = :Unknown if @card_type.nil?
-    puts "Card Type: #{@card_type}"
+    @@card_type = :Unknown if @@card_type.nil?
+    puts "Card Type: #{@@card_type}"
   end
 
   def get_card_validity
