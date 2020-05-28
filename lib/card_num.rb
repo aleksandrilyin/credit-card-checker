@@ -1,10 +1,10 @@
 class CardNum
-  @@card_type = :Unknown
-
+  attr_reader :card_type
   attr_writer :card_num
 
   def initialize(card_num)
     @card_num = card_num.join
+    @card_type = :Unknown
   end
 
   def check_argument
@@ -22,33 +22,33 @@ class CardNum
     cards = [
       {
         card_type: :AMEX,
-        begins_with: [34, 37],
+        begins_with: %w[34 37],
         num_length: [15]
       }, {
         card_type: :Discover,
-        begins_with: [6011],
+        begins_with: %w[6011],
         num_length: [16]
       }, {
         card_type: :MasterCard,
-        begins_with: [51, 52, 53, 54, 55],
+        begins_with: %w[51 52 53 54 55],
         num_length: [16]
       }, {
         card_type: :Visa,
-        begins_with: [4],
+        begins_with: %w[4],
         num_length: [13, 16]
       }
     ]
 
     cards.each do |card|
-      if (card[:begins_with].include?(get_begin_digits(0..3).to_i) ||
-      card[:begins_with].include?(get_begin_digits(0..1).to_i) ||
-      card[:begins_with].include?(get_begin_digits(0).to_i)) &&
+      if (card[:begins_with].include?(get_begin_digits(0..3)) ||
+      card[:begins_with].include?(get_begin_digits(0..1)) ||
+      card[:begins_with].include?(get_begin_digits(0))) &&
       card[:num_length].include?(@card_num.size)
-        @@card_type = card[:card_type]
+        @card_type = card[:card_type]
       end
     end
 
-    @@card_type
+    @card_type
   end
 
   def get_card_validity
