@@ -105,4 +105,17 @@ RSpec.describe CardNum do
       end
     end
   end
+
+  describe '#get_card_validity' do
+    context 'when get Card Validity' do
+      it 'returns Valid' do
+        expect(cn.get_card_validity).to eq(:Valid)
+      end
+
+      it 'returns Invalid' do
+        cn = described_class.new(%w[4417 1234 5678 9112])
+        expect(cn.get_card_validity).to eq(:Invalid)
+      end
+    end
+  end
 end
