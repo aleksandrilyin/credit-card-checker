@@ -99,7 +99,7 @@ $ bundle
 
 Run the tests:
 ```sh
-$ bundle exec rspec -f d
+$ bundle exec rspec
 ```
 
 ## Localization `README.md`

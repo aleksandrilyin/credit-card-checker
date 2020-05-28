@@ -99,5 +99,5 @@ $ bundle
 
 Запустите тесты:
 ```sh
-$ bundle exec rspec -f d
+$ bundle exec rspec
 ```
