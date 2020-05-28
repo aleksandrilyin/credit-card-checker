@@ -1,6 +1,6 @@
 require 'card_num'
 
-describe CardNum do
+RSpec.describe CardNum do
   subject(:cn) { described_class.new(%w[4408 0412 3456 7893]) }
 
   describe '#check_argument' do
@@ -44,6 +44,64 @@ describe CardNum do
 
       it 'returns the first digit' do
         expect(cn.get_begin_digits(0)).to eq('4')
+      end
+    end
+  end
+
+  describe '#get_card_type' do
+    context 'when get Card Type' do
+      it 'returns AMEX (Begins With: 34)' do
+        cn = described_class.new(%w[3408 0412 3456 789])
+        expect(cn.get_card_type).to eq(:AMEX)
+      end
+
+      it 'returns AMEX (Begins With: 37)' do
+        cn = described_class.new(%w[3708 0412 3456 789])
+        expect(cn.get_card_type).to eq(:AMEX)
+      end
+
+      it 'returns Discover' do
+        cn = described_class.new(%w[6011 0412 3456 7893])
+        expect(cn.get_card_type).to eq(:Discover)
+      end
+
+      it 'returns MasterCard (Begins With: 51)' do
+        cn = described_class.new(%w[5108 0412 3456 7893])
+        expect(cn.get_card_type).to eq(:MasterCard)
+      end
+
+      it 'returns MasterCard (Begins With: 52)' do
+        cn = described_class.new(%w[5208 0412 3456 7893])
+        expect(cn.get_card_type).to eq(:MasterCard)
+      end
+
+      it 'returns MasterCard (Begins With: 53)' do
+        cn = described_class.new(%w[5308 0412 3456 7893])
+        expect(cn.get_card_type).to eq(:MasterCard)
+      end
+
+      it 'returns MasterCard (Begins With: 54)' do
+        cn = described_class.new(%w[5408 0412 3456 7893])
+        expect(cn.get_card_type).to eq(:MasterCard)
+      end
+
+      it 'returns MasterCard (Begins With: 55)' do
+        cn = described_class.new(%w[5508 0412 3456 7893])
+        expect(cn.get_card_type).to eq(:MasterCard)
+      end
+
+      it 'returns Visa (Number Length: 13)' do
+        cn = described_class.new(%w[4408 0412 3456 7])
+        expect(cn.get_card_type).to eq(:Visa)
+      end
+
+      it 'returns Visa (Number Length: 16)' do
+        expect(cn.get_card_type).to eq(:Visa)
+      end
+
+      it 'returns Unknown' do
+        cn = described_class.new(%w[0408 0412 3456 7893])
+        expect(cn.get_card_type).to eq(:Unknown)
       end
     end
   end
