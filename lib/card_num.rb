@@ -1,4 +1,6 @@
 class CardNum
+  @@card_type = :Unknown
+
   attr_writer :card_num
 
   def initialize(card_num)
@@ -46,17 +48,10 @@ class CardNum
       end
     end
 
-    @@card_type = :Unknown if @@card_type.nil?
-    puts "Card Type: #{@@card_type}"
+    @@card_type
   end
 
   def get_card_validity
-    if @card_num.reverse.split(//).each_slice(2).flat_map{ |a, b| [a.to_i, 2 * b.to_i] }.join.split(//).map(&:to_i).reduce(:+) % 10 == 0
-      card_validity = :Valid
-    else
-      card_validity = :Invalid
-    end
-
-    puts "Card Validity: #{card_validity}"
+    @card_num.reverse.split(//).each_slice(2).flat_map{ |a, b| [a.to_i, 2 * b.to_i] }.join.split(//).map(&:to_i).reduce(:+) % 10 == 0 ? :Valid : :Invalid
   end
 end
