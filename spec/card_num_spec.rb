@@ -10,7 +10,7 @@ RSpec.describe CardNum do
         expect { cn.check_argument }.to raise_error(ArgumentError)
       end
 
-      it 'contains non-digital card number' do
+      it 'contains non-digit in the card number' do
         cn = described_class.new(%w[4408 0412 3456 789a])
         expect { cn.check_argument }.to raise_error(ArgumentError)
       end
