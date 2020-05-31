@@ -1,25 +1,11 @@
 class CardNum
-  attr_reader :card_type
-  attr_writer :card_num
+  attr_accessor :card_num
+  attr_reader :card_type, :cards
 
   def initialize(card_num)
     @card_num = card_num.join
     @card_type = :Unknown
-  end
-
-  def check_argument
-    raise ArgumentError.new('undefined card number') if @card_num.empty?
-    raise ArgumentError.new('expected only digits in the card number') if @card_num.match?(/\D/)
-    raise ArgumentError.new('unexpected card number length other than 13, 15 or 16 digits') unless @card_num.size.to_s.match?(/13|15|16/)
-  end
-
-  def get_begin_digits(i)
-    begin_digits = @card_num.split(//)[i]
-    i != 0 ? begin_digits.join : begin_digits
-  end
-
-  def get_card_type
-    cards = [
+    @cards = [
       {
         card_type: :AMEX,
         begins_with: %w[34 37],
@@ -38,8 +24,21 @@ class CardNum
         num_length: [13, 16]
       }
     ]
+  end
 
-    cards.each do |card|
+  def check_argument
+    raise ArgumentError.new('undefined card number') if @card_num.empty?
+    raise ArgumentError.new('expected only digits in the card number') if @card_num.match?(/\D/)
+    raise ArgumentError.new('unexpected card number length other than 13, 15 or 16 digits') unless @card_num.size.to_s.match?(/(13|15|16)/)
+  end
+
+  def get_begin_digits(i)
+    begin_digits = @card_num.split(//)[i]
+    i != 0 ? begin_digits.join : begin_digits
+  end
+
+  def get_card_type
+    @cards.each do |card|
       if (card[:begins_with].include?(get_begin_digits(0..3)) ||
       card[:begins_with].include?(get_begin_digits(0..1)) ||
       card[:begins_with].include?(get_begin_digits(0))) &&
