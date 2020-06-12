@@ -52,7 +52,7 @@ That card is not valid.
 
 * Ruby 2.6.5 or newer
 
-## Installation
+## Installing
 
 [Download ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/master.zip) or clone the repository locally:
 ```sh
