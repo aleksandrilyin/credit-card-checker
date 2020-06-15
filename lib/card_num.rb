@@ -12,7 +12,7 @@ class CardNum
         num_length: [15]
       }, {
         card_type: :Discover,
-        begins_with: %w[6011],
+        begins_with: ['6011'],
         num_length: [16]
       }, {
         card_type: :MasterCard,
@@ -20,7 +20,7 @@ class CardNum
         num_length: [16]
       }, {
         card_type: :Visa,
-        begins_with: %w[4],
+        begins_with: ['4'],
         num_length: [13, 16]
       }
     ]
