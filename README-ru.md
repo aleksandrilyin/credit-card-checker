@@ -68,7 +68,7 @@ $ cd credit-card-checker/
 
 Запустите программу:
 ```sh
-$ ruby credit_card_checker.rb <номер карты>
+$ ruby credit_card_checker.rb <номер_карты>
 ```
 
 ### Примеры использования

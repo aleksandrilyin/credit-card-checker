@@ -2,7 +2,7 @@
 
 The solution of the [test assignment](https://github.com/aristofun/webdevdao/blob/master/test_assignments/credit_card_checker.md) for the position of Ruby on Rails developer.
 
-[The implementation of the Luhn algorithm](https://ru.wikibooks.org/wiki/Реализации_алгоритмов/Алгоритм_Луна) is used.
+The [implementation of the Luhn algorithm](https://ru.wikibooks.org/wiki/Реализации_алгоритмов/Алгоритм_Луна) is used.
 
 ## Description
 
@@ -68,7 +68,7 @@ $ cd credit-card-checker/
 
 Run the program:
 ```sh
-$ ruby credit_card_checker.rb <card number>
+$ ruby credit_card_checker.rb <card_number>
 ```
 
 ### Usage Examples
