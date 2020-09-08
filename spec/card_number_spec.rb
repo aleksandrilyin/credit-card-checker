@@ -83,6 +83,16 @@ RSpec.describe CardNumber do
         expect(card_number.get_card_type).to eq('Visa')
       end
 
+      it 'returns Visa (Argument: without spaces)' do
+        card_number = described_class.new(%w[4408041234567893])
+        expect(card_number.get_card_type).to eq('Visa')
+      end
+
+      it 'returns Visa (Argument: with spaces)' do
+        card_number = described_class.new(%w[4 4 0 8 0412 3456 7893])
+        expect(card_number.get_card_type).to eq('Visa')
+      end
+
       it 'returns Unknown' do
         card_number = described_class.new(%w[0408 0412 3456 7893])
         expect(card_number.get_card_type).to eq('Unknown')
