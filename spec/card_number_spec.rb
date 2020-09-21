@@ -15,18 +15,13 @@ RSpec.describe CardNumber do
         expect { card_number.check_argument }.to raise_error(ArgumentError)
       end
 
-      it 'contains card number length less 13 digits' do
-        card_number = described_class.new(%w[4408 0412 3456])
+      it 'contains card number length less 12 digits' do
+        card_number = described_class.new(%w[4408 0412 345])
         expect { card_number.check_argument }.to raise_error(ArgumentError)
       end
 
-      it 'contains card number length 14 digits' do
-        card_number = described_class.new(%w[4408 0412 3456 78])
-        expect { card_number.check_argument }.to raise_error(ArgumentError)
-      end
-
-      it 'contains card number length more 16 digits' do
-        card_number = described_class.new(%w[4408 0412 3456 7893 0])
+      it 'contains card number length more 19 digits' do
+        card_number = described_class.new(%w[4408 0412 3456 7893 0000])
         expect { card_number.check_argument }.to raise_error(ArgumentError)
       end
     end
@@ -112,22 +107,4 @@ RSpec.describe CardNumber do
       end
     end
   end
-
-=begin
-  describe '#get_begin_digits' do
-    context 'when get begin digits' do
-      it 'returns four digits' do
-        expect(card_number.get_begin_digits(0..3)).to eq('4408')
-      end
-
-      it 'returns two digits' do
-        expect(card_number.get_begin_digits(0..1)).to eq('44')
-      end
-
-      it 'returns the first digit' do
-        expect(card_number.get_begin_digits(0)).to eq('4')
-      end
-    end
-  end
-=end
 end

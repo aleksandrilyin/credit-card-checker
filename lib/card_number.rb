@@ -24,7 +24,7 @@ class CardNumber
   def check_argument
     raise ArgumentError.new('undefined card number') if card_number.empty?
     raise ArgumentError.new('expected only digits in the card number') if card_number.match?(/\D/)
-    raise ArgumentError.new('unexpected card number length other than 13, 15 or 16 digits') unless card_number.size.to_s.match?(/(13|15|16)/)
+    raise ArgumentError.new('unexpected card number length other than 12-19 digits') unless (12..19).include?(card_number.size)
   end
 
   def get_card_type
