@@ -41,7 +41,7 @@ class CardNumber
   end
 
   def get_card_validity
-    card_number.reverse.split(//).each_slice(2).flat_map{ |a, b| [a.to_i, 2 * b.to_i] }.join.split(//).map(&:to_i).reduce(:+) % 10 == 0 ? 'Valid' : 'Invalid'
+    card_number.reverse.split(//).each_slice(2).flat_map { |a, b| [a.to_i, 2 * b.to_i] }.join.split(//).map(&:to_i).reduce(:+) % 10 == 0 ? 'Valid' : 'Invalid'
   end
 
   private
