@@ -1,9 +1,5 @@
 # Credit Card Check Service
 
-The solution of the [test assignment](https://github.com/aristofun/webdevdao/blob/master/test_assignments/credit_card_checker.md) for the position of Ruby on Rails developer.
-
-The [implementation of the Luhn algorithm](https://ru.wikibooks.org/wiki/Реализации_алгоритмов/Алгоритм_Луна) is used.
-
 ## Description
 
 Before a credit card is submitted to a financial institution, it generally makes sense to run some simple reality checks on the number. The numbers are a good length and it's common to make minor transcription errors when the card is not scanned directly.
