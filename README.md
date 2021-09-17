@@ -1,4 +1,6 @@
-# Credit Card Check Service
+# Credit Card Checker
+
+Credit card checking service.
 
 ## Description
 
@@ -50,7 +52,7 @@ That card is not valid.
 
 ## Installing
 
-[Download ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/master.zip) or clone the repository locally:
+[Download ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/refs/heads/master.zip) or clone the repository locally:
 ```sh
 $ git clone git@github.com:aleksandrilyin/credit-card-checker.git
 ```

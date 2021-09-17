@@ -1,4 +1,6 @@
-# Сервис проверки кредитных карт
+# Проверка кредитных карт
+
+Сервис проверки кредитных карт.
 
 ## Описание
 
@@ -50,7 +52,7 @@
 
 ## Установка
 
-[Скачайте ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/master.zip) или клонируйте репозиторий локально:
+[Скачайте ZIP](https://github.com/aleksandrilyin/credit-card-checker/archive/refs/heads/master.zip) или клонируйте репозиторий локально:
 ```sh
 $ git clone git@github.com:aleksandrilyin/credit-card-checker.git
 ```
