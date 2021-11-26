@@ -49,7 +49,6 @@ class CardNumber
   private
 
   def get_begin_digits(i)
-    begin_digits = card_number[i].chars
-    i != 0 ? begin_digits.join : begin_digits
+    card_number[i]
   end
 end
