@@ -22,7 +22,7 @@ class CardNumber
       begins_with: %w[4],
       number_length: [13, 16]
     }
-  ]
+  ].freeze
 
   attr_reader :card_number, :card_type
 
