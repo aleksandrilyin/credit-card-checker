@@ -2,18 +2,26 @@
 
 class CardNumber
   CARDS = [
-    {card_type: "AMEX",
-     begins_with: %w[34 37],
-     number_length: [15]},
-    {card_type: "Discover",
-     begins_with: ["6011"],
-     number_length: [16]},
-    {card_type: "MasterCard",
-     begins_with: %w[51 52 53 54 55],
-     number_length: [16]},
-    {card_type: "Visa",
-     begins_with: ["4"],
-     number_length: [13, 16]}
+    {
+      card_type: "AMEX",
+      begins_with: %w[34 37],
+      number_length: [15]
+    },
+    {
+      card_type: "Discover",
+      begins_with: %w[6011],
+      number_length: [16]
+    },
+    {
+      card_type: "MasterCard",
+      begins_with: %w[51 52 53 54 55],
+      number_length: [16]
+    },
+    {
+      card_type: "Visa",
+      begins_with: %w[4],
+      number_length: [13, 16]
+    }
   ]
 
   attr_reader :card_number, :card_type
