@@ -40,8 +40,8 @@ class CardNumber
   def get_card_type
     CARDS.each do |card|
       if (card[:begins_with].include?(get_begin_digits(0..3)) ||
-      card[:begins_with].include?(get_begin_digits(0..1)) ||
-      card[:begins_with].include?(get_begin_digits(0))) &&
+          card[:begins_with].include?(get_begin_digits(0..1)) ||
+          card[:begins_with].include?(get_begin_digits(0))) &&
           card[:number_length].include?(card_number.size)
         @card_type = card[:card_type]
       end
