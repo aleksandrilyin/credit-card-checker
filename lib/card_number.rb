@@ -28,6 +28,13 @@ class CardNumber
 
   def initialize(card_number)
     @card_number = card_number.join
+    if @card_number.empty?
+      raise ArgumentError, "Undefined card number"
+    elsif @card_number.match?(/\D/)
+      raise ArgumentError, "Expected only digits in the card number"
+    elsif !(12..19).cover?(@card_number.size)
+      raise ArgumentError, "Unexpected card number length other than 12-19 digits"
+    end
     @card_type = "Unknown"
   end
 
