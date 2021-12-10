@@ -27,13 +27,14 @@ class CardNumber
   attr_reader :card_number, :card_type
 
   def initialize(card_number)
-    @card_number = card_number.join
-    if @card_number.empty?
+    @card_number = if card_number.empty?
       raise ArgumentError, "Undefined card number"
-    elsif @card_number.match?(/\D/)
+    elsif card_number.join.match?(/\D/)
       raise ArgumentError, "Expected only digits in the card number"
-    elsif !(12..19).cover?(@card_number.size)
+    elsif !(12..19).cover?(card_number.join.size)
       raise ArgumentError, "Unexpected card number length other than 12-19 digits"
+    else
+      card_number.join
     end
     @card_type = "Unknown"
   end
