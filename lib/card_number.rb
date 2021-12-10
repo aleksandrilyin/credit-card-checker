@@ -39,12 +39,6 @@ class CardNumber
     @card_type = "Unknown"
   end
 
-  def check_argument
-    raise ArgumentError.new("undefined card number") if card_number.empty?
-    raise ArgumentError.new("expected only digits in the card number") if card_number.match?(/\D/)
-    raise ArgumentError.new("unexpected card number length other than 12-19 digits") unless (12..19).cover?(card_number.size)
-  end
-
   def get_card_type
     CARDS.each do |card|
       if (card[:begins_with].include?(get_begin_digits(0..3)) ||
