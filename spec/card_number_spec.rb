@@ -5,30 +5,6 @@ require_relative "../lib/card_number"
 RSpec.describe CardNumber do
   subject(:card_number) { described_class.new(%w[4408 0412 3456 7893]) }
 
-  describe "#check_argument" do
-    context "when raise ArgumentError" do
-      it "contains empty card number" do
-        card_number = described_class.new([])
-        expect { card_number.check_argument }.to raise_error(ArgumentError)
-      end
-
-      it "contains non-digit in the card number" do
-        card_number = described_class.new(%w[4408 0412 3456 789a])
-        expect { card_number.check_argument }.to raise_error(ArgumentError)
-      end
-
-      it "contains card number length less 12 digits" do
-        card_number = described_class.new(%w[4408 0412 345])
-        expect { card_number.check_argument }.to raise_error(ArgumentError)
-      end
-
-      it "contains card number length more 19 digits" do
-        card_number = described_class.new(%w[4408 0412 3456 7893 0000])
-        expect { card_number.check_argument }.to raise_error(ArgumentError)
-      end
-    end
-  end
-
   describe "#get_card_type" do
     context "when get Card Type" do
       it "returns AMEX (Begins With: 34)" do
